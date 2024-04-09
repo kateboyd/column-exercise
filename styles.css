@@ -1,19 +1,29 @@
 .container {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: 10px;
 }
 
 .column {
+    width: 100%;
     border: 1px solid black;
     padding: 10px;
     text-align: center;
-    flex-grow: 1;
 }
 
 .double {
     border: 1px solid black;
     padding: 10px;
     text-align: center;
-    flex-grow: 2;
+}
+
+@media screen and (max-width: 800px) {
+	.column {
+		background-color: orange;
+        flex-direction: column;
+    }
+    .container {
+        flex-direction: column;
+    }
 }
